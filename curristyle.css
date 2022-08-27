@@ -32,6 +32,7 @@ body {
 .print-area {
   width: 80%;
   margin: 20px auto;
+  z-index: -1;
 }
 
 .print-area .header {
@@ -42,6 +43,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  z-index: 1;
 }
 
 .header img {
@@ -57,7 +59,7 @@ body {
   transition: 0.5s;
   user-select: none;
   filter: grayscale(100%);
-
+  z-index: 1;
   /*opacity: 0%; /* oculta la imagen completamente */
 }
 
@@ -69,7 +71,7 @@ body {
 .header-text {
   color: var(--main-text-color);
   width: 60%;
-  margin-left: 20%;
+  margin-left: 13%; /*20%*/
 }
 
 .header-text h1 {
@@ -85,6 +87,48 @@ body {
 .header-text p {
   font-size: 1.5rem;
 }
+
+.triangle {
+  width: 0;
+  height: 0;
+  border: 6rem solid transparent;
+  border-right: 0;
+  border-left: 2rem solid var(--right-area-color);
+  position: absolute;
+  right: 5px;
+  z-index: -2;
+}
+
+.texto {
+  position: absolute;
+  bottom: -3.4rem;
+  left: -2rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  -ms-writing-mode: rl-tb;
+  text-orientation: upright;
+  font-weight: bold;
+  z-index: 1;
+}
+
+#nosubrayado {
+  text-decoration: none;
+  color: greenyellow;
+}
+
+#nosubrayado:hover {
+  cursor: pointer;
+  color: var(--color-navy);
+}
+
+/*
+.texto:hover {
+  cursor: pointer;
+  color: var(--color-navy);
+}
+*/
 
 .content {
   display: flex;

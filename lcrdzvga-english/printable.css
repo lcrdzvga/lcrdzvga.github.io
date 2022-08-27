@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap");
+
+/* *********** Custom Properties *********** */
+:root {
+  --main-text-color: #ffffff;
+  --secondary-text-color: #f0f0f0;
+  --right-area-color: eff1db; /*#4a4a4a;*/
+  --left-area-color: #87ceeb;
+  --color-header: #191f45;
+  --color-barra-fondo: #808080;
+  --color-barra: #191f45;
+  --color-navy: #260535;
+  --color-gris-claro: #d3d3d3;
+  min-width: 480px;
+  max-width: 1320px;
+  margin: auto;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans Condensed", sans serif;
+}
+
+body {
+  overflow-x: hidden; /* Para quitar la barra de desplaz. horizontal */
+  font-family: "Open Sans Condensed", sans serif;
+  font-size: 1rem;
+}
+
+.print-area {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.print-area .header {
+  width: 100%;
+  /*height: 230px;*/
+  height: 14rem;
+  background-color: var(--color-header);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header img {
+  width: 10rem; /*200*/
+  height: 10rem; /*200*/
+  border-radius: 50%;
+  position: absolute;
+  top: 2rem; /*15px;*/
+  right: 3rem; /*70px;*/
+  border: 5px solid white;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: 0.5s;
+  user-select: none;
+  filter: grayscale(100%);
+}
+
+.header-text {
+  color: var(--main-text-color);
+  width: 60%;
+  margin-left: 20%;
+}
+
+.header-text h1 {
+  font-size: 1.3rem;
+  /*font-weight: normal;*/
+}
+
+.enfasis {
+  display: inline-flex;
+  /* border: solid whitesmoke 3px;*/
+}
+
+.header-text p {
+  font-size: 0.8rem;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-area {
+  width: 30%;
+  background-color: var(--left-area-color);
+  text-align: center;
+}
+
+.left-area .contact h5 p {
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+}
+
+#left-uno {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.left-area h4 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 15px 0;
+  background-color: #1e1e1e;
+  color: var(--main-text-color);
+}
+
+.left-area h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 3px 3px 0px 0px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.bars {
+  margin: 0.3rem;
+  padding: 0 0.3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px 5px;
+}
+
+.bar span {
+  display: block;
+  width: 100%;
+  height: 0.7rem;
+  background-color: var(--color-gris-claro) /* #cccccc */;
+  margin-top: 0.3rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.bar span::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 100%;
+  background-color: var(--color-header);
+  left: 2px;
+  /*transform: translateY(-50%);*/
+  border-radius: 10px;
+}
+
+/* *********** Progress Bar *********** */
+
+.progress {
+  width: 100%;
+  height: 100%;
+}
+
+.progress p {
+  font-weight: condensed;
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--color-navy);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--color-navy);
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--color-navy);
+}
+
+.right-area {
+  width: 70%;
+  background-color: var(--right-area-color);
+  text-align: center;
+}
+
+.right-area h2 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+
+#h2yo {
+  padding-top: 2rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.1rem;
+  text-align: center;
+}
+
+#mi-yo {
+  padding-top: 1.3rem;
+  padding-right: 0%;
+}
+
+#line-yo {
+  display: block;
+  margin-left: 3rem;
+  color: lightgrey;
+  margin-top: 0.3em;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.right-area .about {
+  margin-top: 0.2rem;
+}
+
+.right-area p {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  padding-bottom: 1rem;
+  text-align: justify;
+  word-break: normal;
+  font-size: 1.1rem;
+}
+
+#h2profess {
+  padding-top: 2rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.1rem;
+  text-align: center;
+}
+
+#line-profess {
+  display: block;
+  margin-left: 3rem;
+  color: lightgrey;
+  margin-top: 0.3em;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#h2expe {
+  padding-top: 2rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.1rem;
+  text-align: center;
+}
+
+#line-expe {
+  display: block;
+  margin-left: 3rem;
+  color: lightgrey;
+  margin-top: 0.3em;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.work-group h3,
+h4 {
+  padding-top: 0.1rem; /*1.3rem;*/
+  padding-left: 1.5rem;
+  /*padding-bottom: 0.5rem;*/
+  text-align: center;
+}
+
+.work-group p {
+  margin-left: 3rem;
+  width: 100%;
+}
+
+#h2edu {
+  padding-top: 2rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+#line-edu {
+  display: block;
+  color: var(--color-header);
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 2px;
+  width: 40%;
+  text-align: center;
+}
+
+.edu-group {
+  margin: 0;
+  padding: 0;
+}
+
+.edu-group .edu-item {
+  margin-right: 5px; /*2em;*/
+  margin-left: 5px; /*2em;*/
+  margin-bottom: 10px; /*0px*/
+  border: 1px solid; /*2px solid*/
+}
+
+.edu-group .edu-item h5 {
+  margin-top: 15px;
+}
+#h2jobs {
+  padding-top: 2rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+#line-jobs {
+  display: block;
+  color: var(--color-header);
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 2px;
+  width: 40%;
+  text-align: center;
+}
+
+#linkuno {
+  color: #ffffff;
+}
+
+.footer {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: var(--main-text-color);
+  background-color: var(--color-header);
+}
+
+.vinieta {
+  list-style-position: inside;
+  list-style-type: circle;
+  text-align: left;
+  margin-left: 3rem;
+}
+
+.vinieta-left {
+  list-style-position: outside;
+  list-style-type: none;
+  text-align: center;
+  margin-left: 1.5rem;
+}
+
+@media print {
+  .boton * {
+    visibility: hidden;
+  }
+}
