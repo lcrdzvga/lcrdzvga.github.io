@@ -11,7 +11,7 @@
   --color-barra: #191f45;
   --color-navy: #260535;
   --color-gris-claro: #d3d3d3;
-  min-width: 670px;
+  min-width: 671px; 
   max-width: 1328px;
   margin: auto;
 }
